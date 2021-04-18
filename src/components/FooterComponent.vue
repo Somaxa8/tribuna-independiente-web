@@ -3,7 +3,7 @@
     <v-footer dark padless style="margin-top: 40px">
       <v-card flat tile width="100%" class="white--text text-center" color="primary">
         <v-card-text>
-          <v-btn v-for="icon in icons" :key="icon.url" class="mx-4 white--text" icon @click="redirect(icon.url)">
+          <v-btn v-for="icon in icons" :key="icon.icon" class="mx-4 white--text" icon @click="redirect(icon.url)">
             <v-icon size="24px">{{ icon.icon }}</v-icon>
           </v-btn>
         </v-card-text>

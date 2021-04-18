@@ -1,6 +1,6 @@
 <template>
     <div>
-      <v-card class="mx-auto my-12" @click="console.log('hola')">
+      <v-card class="mx-auto my-12" @click="rowClick(news.id)">
         <v-img height="150" :src="news.image.url"/>
 
         <v-card-title>{{ news.title }}</v-card-title>
@@ -17,5 +17,10 @@ import News from "@/models/News";
 @Component
 export default class NewsPreview extends Vue {
   @Prop() readonly news!: News
+
+
+  rowClick(id: string) {
+    this.$router.replace("/noticias/" + id)
+  }
 }
 </script>

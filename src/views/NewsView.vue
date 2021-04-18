@@ -1,6 +1,7 @@
 <template>
+  <div>
+    <v-progress-linear :indeterminate="true" :active="loading" color="warning"/>
     <v-container>
-
       <v-row justify="center" class="ma-5 d-flex flex-column">
         <h1 class="text-center">Noticias</h1>
         <v-divider/>
@@ -10,12 +11,11 @@
           :items="newsList" :loading="loading"
           :show-select="false" :page.sync="page" @page-count="pageCount = $event"
           :items-per-page="itemsPerPage" :server-items-length="totalItems"
-          :options.sync="options" loading-text="Cargando..." hide-default-footer
-      >
+          :options.sync="options" loading-text="Cargando..." hide-default-footer>
         <template v-slot:default="{items}">
           <v-row>
             <v-col v-for="news in items" :key="news.id" cols="12">
-              <NewsPreview :news="news" />
+              <NewsPreview :news="news"/>
             </v-col>
           </v-row>
         </template>
@@ -46,6 +46,7 @@
         </template>
       </v-data-iterator>
     </v-container>
+  </div>
 </template>
 
 <script lang="ts">
@@ -71,7 +72,6 @@ export default class NewsView extends Vue {
   totalItems: number = 0
 
 
-
   @Watch("options")
   watchOptions() {
     NewsService.getNewsPaginated(this, this.newsList, this.page - 1, this.itemsPerPage, this.label.id)
@@ -81,5 +81,6 @@ export default class NewsView extends Vue {
     NewsLabelService.getLabels(this, this.labels)
     this.watchOptions()
   }
+
 }
 </script>

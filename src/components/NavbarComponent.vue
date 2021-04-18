@@ -61,7 +61,7 @@ export default class NavbarComponent extends Vue {
 
   buttons = [
     { title: "Inicio", url: "/" },
-    { title: "Noticias", url: "/news" },
+    { title: "Noticias", url: "/noticias" },
     { title: "Opinion", url: "/opinion" },
     { title: "Entrevistas", url: "/interviews" },
     { title: "Caricaturas", url: "/caricaturas" }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="mx-auto d-flex" @click="console.log('hola')">
+    <v-card class="mx-auto d-flex" @click="rowClick(news.id)">
       <v-img width="15%" height="100%" :src="news.image.url"/>
       <div class="d-flex row ma-4 mt-0 mb-0">
         <v-card-title class="pt-0 mt-3">{{ news.title }}</v-card-title>
@@ -15,7 +15,12 @@ import {Component, Prop, Vue} from "vue-property-decorator";
 import News from "@/models/News";
 
 @Component
-export default class NewsPreview extends Vue {
+export default class NewsPreview2 extends Vue {
   @Prop() readonly news!: News
+
+
+  rowClick(id: string) {
+    this.$router.replace("/noticias/" + id)
+  }
 }
 </script>
