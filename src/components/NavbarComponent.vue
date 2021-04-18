@@ -63,7 +63,7 @@ export default class NavbarComponent extends Vue {
     { title: "Inicio", url: "/" },
     { title: "Noticias", url: "/noticias" },
     { title: "Opinion", url: "/opinion" },
-    { title: "Entrevistas", url: "/interviews" },
+    { title: "Entrevistas", url: "/entrevistas" },
     { title: "Caricaturas", url: "/caricaturas" }
   ]
 

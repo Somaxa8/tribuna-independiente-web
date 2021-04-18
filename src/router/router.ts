@@ -29,6 +29,11 @@ const routes: Array<RouteConfig> = [
     name: 'Blog',
     component: () => import("../views/BlogView.vue")
   },
+  {
+    path: '/entrevistas',
+    name: 'Interview',
+    component: () => import("../views/InterviewsView.vue")
+  },
 ]
 
 const router = new VueRouter({
