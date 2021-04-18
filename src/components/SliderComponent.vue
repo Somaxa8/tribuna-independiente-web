@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-carousel cycle hide-delimiter-background show-arrows-on-hover>
+  <div class="mb-8">
+    <v-carousel cycle hide-delimiter-background show-arrows-on-hover style="height: 400px">
       <v-carousel-item contain v-for="(slide ,i) in slides" :key="i" eager>
         <v-img contain height="100%" :src="slide.image.url" @click="redirect(slide.url)" eager/> </v-carousel-item>
     </v-carousel>

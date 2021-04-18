@@ -2,16 +2,16 @@
   <div>
     <v-app-bar @click="$router.push('/')" height="200px">
       <template v-slot:img="{ props }">
-        <v-img v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgb(255 245 226 / 80%)"/>
+        <v-img v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgb(255 245 226 / 80%)" src="@/assets/logo_large.png"/>
       </template>
       <v-container>
         <v-row no-gutters>
-          <v-col align-self="center" cols="2" md="1" class="mb-0">
+          <v-col align-self="center" cols="2" md="1" class="mb-0 mr-4">
             <v-img class="logo" src="@/assets/logo.png"/>
           </v-col>
           <v-col align-self="center" cols="10" md="9" class="mt-5">
             <v-row>
-              <v-toolbar-title >Tribuna Independiente</v-toolbar-title>
+              <v-toolbar-title style="font-size: 28px">Tribuna Independiente</v-toolbar-title>
             </v-row>
           </v-col>
         </v-row>
