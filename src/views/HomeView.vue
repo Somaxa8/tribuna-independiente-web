@@ -43,7 +43,7 @@
 <script lang="ts">
 import {Component, Vue, Watch} from 'vue-property-decorator';
 import SliderComponent from "@/components/SliderComponent.vue";
-import NewsPreview from "@/components/NewsPreview.vue";
+import NewsPreview from "@/components/NewsPreviewComponent.vue";
 import News from "@/models/News";
 import NewsService from "@/services/NewsService";
 import Options from "@/models/vue/Options";

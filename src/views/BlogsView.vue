@@ -38,7 +38,7 @@ import {Component, Vue, Watch} from "vue-property-decorator";
 import Options from "@/models/vue/Options";
 import Blog from "@/models/Blog";
 import BlogService from "@/services/BlogService";
-import BlogPreview from "@/components/BlogPreview.vue";
+import BlogPreview from "@/components/BlogPreviewComponent.vue";
 
 @Component({components:{BlogPreview}})
 export default class BlogsView extends Vue {

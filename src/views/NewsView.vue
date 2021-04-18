@@ -54,7 +54,7 @@ import {Component, Vue, Watch} from "vue-property-decorator";
 import News from "@/models/News";
 import Options from "@/models/vue/Options";
 import NewsService from "@/services/NewsService";
-import NewsPreview from "@/components/NewsPreview2.vue";
+import NewsPreview from "@/components/NewsPreview2Component.vue";
 import NewsLabelService from "@/services/NewsLabelService";
 import NewsLabel from "@/models/NewsLabel";
 
