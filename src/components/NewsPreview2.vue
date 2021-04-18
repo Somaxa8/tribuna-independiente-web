@@ -22,5 +22,6 @@ export default class NewsPreview2 extends Vue {
   rowClick(id: string) {
     this.$router.replace("/noticias/" + id)
   }
+
 }
 </script>
