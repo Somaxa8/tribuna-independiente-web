@@ -14,7 +14,7 @@
           :options.sync="options" loading-text="Cargando..." hide-default-footer>
         <template v-slot:default="{items}">
           <v-row>
-            <v-col v-for="interview in items" :key="interview.id" cols="12">
+            <v-col v-for="interview in items" :key="interview.id" cols="12" sm="6" md="6" lg="6">
               <InterviewPreview :interview="interview"/>
             </v-col>
           </v-row>

@@ -25,7 +25,7 @@ export default class InterviewService {
             // @ts-ignore
             component.loading = false
             console.log(err)
-            getModule(SnackbarModule).makeToast("No se han podido obtener las entrvistas");
+            getModule(SnackbarModule).makeToast("No se han podido obtener las entrevistas");
         }
     }
 
