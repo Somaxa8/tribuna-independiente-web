@@ -31,8 +31,13 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/entrevistas',
-    name: 'Interview',
+    name: 'Interviews',
     component: () => import("../views/InterviewsView.vue")
+  },
+  {
+    path: '/caricaturas',
+    name: 'Cartoons',
+    component: () => import("../views/CartoonView.vue")
   },
 ]
 
