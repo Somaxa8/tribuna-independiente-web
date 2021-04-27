@@ -7,4 +7,10 @@ export default class Auditing {
     @JsonProperty("createdAt", DateTimeConverter, true)
     createdAt?: DateTime = undefined
 
+    @JsonProperty("updatedAt", DateTimeConverter, true)
+    updatedAt?: DateTime = undefined
+
+    @JsonProperty("createdBy", User, true)
+    createdBy?: User = undefined
+
 }

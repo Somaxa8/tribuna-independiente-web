@@ -3,7 +3,7 @@ import Document from "@/models/Document";
 import Auditing from "@/models/Auditing";
 
 @JsonObject("Blog")
-export default class Blog extends Auditing{
+export default class Blog extends Auditing {
 
     @JsonProperty("id", Number, true)
     id?: number = undefined
