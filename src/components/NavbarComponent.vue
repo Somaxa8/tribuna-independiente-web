@@ -1,22 +1,9 @@
 <template>
   <div>
-    <v-app-bar @click="$router.push('/')" height="200px">
+    <v-app-bar @click="$router.push('/')" height="150px" color="#fff">
       <template v-slot:img="{ props }">
-        <v-img v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgb(255 245 226 / 80%)" src="@/assets/logo_large.png"/>
+        <v-img v-bind="props" width="100%" height="100%" src="@/assets/logo_large.png" contain/>
       </template>
-      <v-container>
-        <v-row no-gutters>
-          <v-col align-self="center" cols="2" md="1" class="mb-0 mr-4">
-            <v-img class="logo" src="@/assets/logo.png"/>
-          </v-col>
-          <v-col align-self="center" cols="10" md="9" class="mt-5">
-            <v-row>
-              <v-toolbar-title style="font-size: 28px">Tribuna Independiente</v-toolbar-title>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-container>
-
     </v-app-bar>
 
     <v-bottom-navigation height="63">

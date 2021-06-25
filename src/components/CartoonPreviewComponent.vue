@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="mx-auto my-12">
+    <v-card class="mx-auto">
       <v-img height="350" :src="cartoon.image.url"/>
 
       <v-card-title>{{ cartoon.title }}</v-card-title>
