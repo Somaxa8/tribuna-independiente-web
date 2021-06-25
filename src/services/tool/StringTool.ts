@@ -1,3 +1,5 @@
+import {DateTime} from "luxon";
+
 export default class StringTool {
 
     private static readonly VALID_EMAIL_ADDRESS_REGEX = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
@@ -17,6 +19,10 @@ export default class StringTool {
         let splitFilter: boolean = true
         search.split(" ").forEach(w => { if (!text.includes(w)) { splitFilter = false } })
         return splitFilter
+    }
+
+    static formatDate(date: DateTime) {
+        return date.setLocale("es").toFormat('dd $ MMMM yyyy').replace("$", "de")
     }
 
 }
