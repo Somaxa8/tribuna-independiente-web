@@ -74,7 +74,7 @@ export default class NewsView extends Vue {
 
   @Watch("options")
   watchOptions() {
-    NewsService.getNewsPaginated(this, this.newsList, this.page - 1, this.itemsPerPage, this.label.id)
+    NewsService.getNewsPaginated(this, this.newsList, this.page - 1, this.itemsPerPage, false, this.label.id)
   }
 
   created() {

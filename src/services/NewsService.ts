@@ -7,12 +7,12 @@ import News from "@/models/News";
 
 export default class NewsService {
 
-    static async getNewsPaginated(component: Vue, news: News[], page: number, size: number, labelId: number | null | undefined) {
+    static async getNewsPaginated(component: Vue, news: News[], page: number, size: number, featured: boolean = false, labelId: number | null | undefined) {
         // @ts-ignore
         component.loading = true
         try {
             const response = await component.axios.get(ConstantTool.BASE_URL + "/public/news", {
-                params: { page, size, labelId: labelId }
+                params: { page, size, labelId, featured }
             })
             let list = JsonTool.jsonConvert.deserializeArray(response.data, News)
             news.splice(0, news.length)
